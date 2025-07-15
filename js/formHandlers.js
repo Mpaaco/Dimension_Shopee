@@ -14,7 +14,17 @@ export function handleCalculate(event, inputs) {
         alert('Preencha corretamente todos os campos com valores maiores que zero.');
         return;
     }
-
+    if ( c >= 120 )
+    {
+        alert('Comprimento não pode ser maior que 120 cm.');
+        return;
+    }
+    if ( a >= 80 )
+    {
+        alert('Comprimento não pode ser maior que 80 cm.');
+        return;
+    }
+    
     const pesoCubico = calcularPesoCubico(c, l, a);
     const resultadoFormatado = formatarResultado(pesoCubico);
     const somaCm = c + l + a;
