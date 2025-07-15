@@ -1,5 +1,5 @@
 
-import { handleCalculate, clearForm } from './formHandlers.js';
+import { handleCalculate, clearForm, validateCampoComprimento, validateCampoLargura, validateCampoAltura } from './formHandlers.js';
 import { validateNumberInput, formatNumberInput } from './validation.js';
 import { addInputEffects, addButtonHoverEffects } from './effects.js';
 import { closeModal } from './modals.js';
@@ -20,6 +20,11 @@ Object.values(inputs).forEach(input => {
     input.addEventListener('keypress', validateNumberInput);
     formatNumberInput(input);
 });
+
+inputs.comprimento.addEventListener('input', () => validateCampoComprimento(inputs.comprimento));
+inputs.largura.addEventListener('input', () => validateCampoLargura(inputs.largura));
+inputs.altura.addEventListener('input', () => validateCampoAltura(inputs.altura));
+
 
 addInputEffects(Object.values(inputs));
 addButtonHoverEffects(document.querySelectorAll('.btn'));

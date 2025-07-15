@@ -14,17 +14,22 @@ export function handleCalculate(event, inputs) {
         alert('Preencha corretamente todos os campos com valores maiores que zero.');
         return;
     }
-    if ( c >= 120 )
+    if ( c >= 120.1 )
     {
         alert('Comprimento não pode ser maior que 120 cm.');
         return;
     }
-    if ( a >= 80 )
+    if ( a >= 80.1 )
     {
-        alert('Comprimento não pode ser maior que 80 cm.');
+        alert(' não pode ser maior que 80 cm.');
         return;
     }
-    
+    if ( l >= 80.1 )
+    {
+        alert('Largura não pode ser maior que 80 cm.');
+        return;
+    }
+
     const pesoCubico = calcularPesoCubico(c, l, a);
     const resultadoFormatado = formatarResultado(pesoCubico);
     const somaCm = c + l + a;
@@ -32,6 +37,45 @@ export function handleCalculate(event, inputs) {
     pesoCubico > 30
         ? showErrorModal(resultadoFormatado, somaCm, '30kg')
         : showSuccessModal(resultadoFormatado, somaCm, '30kg');
+}
+
+export function validateCampoComprimento(input){
+    const valor = parseFloat(input.value);
+    if (!valor || valor <= 0){
+        input.setCustomValidity("O comprimento deve ser um número maior que zero.")
+    } else if ( valor >= 120.1 ){
+        input.setCustomValidity("O comprimento não pode ser maior que 120 cm.")
+    }else {
+        input.setCustomValidity("");}
+
+        input.reportValidity();
+}
+
+export function validateCampoLargura (input){
+    const valor = parseFloat(input.value);
+    if (!valor || valor <= 0){
+        input.setCustomValidity("A largura deve ser um número maior que zero.")
+    } else if (valor >= 80.1 ){
+        input.setCustomValidity("A largura não pode ser maior que 80 cm.")
+    } else {
+        input.setCustomValidity("");
+    }
+
+    input.reportValidity();
+
+}
+
+export function validateCampoAltura (input){
+    const valor = parseFloat(input.value);
+    if (!valor || valor <= 0){
+        input.setCustomValidity("A altura deve ser um número maior que zero.")
+    } else if (valor >= 80.1 ){
+        input.setCustomValidity("A altura não pode ser maior que 80 cm.")
+    } else {
+        input.setCustomValidity("")
+    }
+
+    input.reportValidity();
 }
 
 export function clearForm(inputs) {
