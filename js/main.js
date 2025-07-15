@@ -32,3 +32,12 @@ document.addEventListener('keydown', (event) => {
         closeModal('modalSuccess');
     }
 });
+
+const closeModalSuccessBtn = document.getElementById('closeModalSuccessBtn');
+if (closeModalSuccessBtn) {
+    closeModalSuccessBtn.addEventListener('click', () => closeModal('modalSuccess'));
+}
+const closeModalErrorBtn = document.getElementById('closeModalErrorBtn');
+if (closeModalErrorBtn) {
+    closeModalErrorBtn.addEventListener('click', () => closeModal('modalError'));
+}

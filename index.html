@@ -92,69 +92,71 @@
       </div>
     </div>
 
-    <!-- modal_valor_inocorret -->
-    <div id="modalError" class="modal">
-      <div class="modal-content modal-error">
-        <h1>NÃO PODEMOS ENVIAR ESSE PRODUTO!</h1>
-        <div class="result-section">
-          <h2>
-            <span id="resultError" class="result-value error-value"></span>
-          </h2>
-        </div>
-        <div class="modal-body">
-          <div class="modal-text">
-            <p>
-              <span>O seu produto ultrapassa o peso permitido</span> para
-              transporte em nossa plataforma. <br />
-              O <span>peso máximo permitido</span> para envio é de
-              <span>30 kg (peso cúbico ou peso bruto)</span>, para todas as
-              transportadoras.
-            </p>
-          </div>
-          <div class="modal-mascot">
-            <img
-              src="./img/unnamed (1).png"
-              alt="Shopeto Triste"
-              class="modal-shopeto"
-            />
-          </div>
-        </div>
-        <button class="btn btn-back" onclick="closeModal('modalError')">
-          VOLTAR
-        </button>
+   <!-- Modal de Erro -->
+<div id="modalError" class="modal">
+  <div class="modal-content modal-error">
+    <h1>NÃO PODEMOS ENVIAR ESSE PRODUTO!</h1>
+    <div class="result-section">
+      <h2>
+        <span id="resultError" class="result-value error-value"></span>
+      </h2>
+    </div>
+    <div class="modal-body">
+      <div class="modal-text">
+        <p>
+          <span>O seu produto ultrapassa o peso permitido</span> para
+          transporte em nossa plataforma. <br />
+          O <span>peso máximo permitido</span> para envio é de
+          <span>30 kg (peso cúbico ou peso bruto)</span>, para todas as
+          transportadoras.
+        </p>
+      </div>
+      <div class="modal-mascot">
+        <img
+          src="./img/unnamed (1).png"
+          alt="Shopeto Triste"
+          class="modal-shopeto"
+        />
       </div>
     </div>
+    <button class="btn btn-back" id="closeModalErrorBtn">
+      VOLTAR
+    </button>
+  </div>
+</div>
 
-    <!-- Modal_valor_correto-->
-    <div id="modalSuccess" class="modal">
-      <div class="modal-content modal-success">
-        <h1>DEU CERTO! JÁ PODEMOS ENVIAR!</h1>
-        <div class="result-section">
-          <h2>
-            <span id="resultSuccess" class="result-value success-value"></span>
-          </h2>
-        </div>
-        <div class="modal-body">
-          <div class="modal-text">
-            <p>
-              O seu produto não ultrapassa o peso permitido para transporte em
-              nossa plataforma. O peso máximo permitido na Shopee é de 30 kg
-              (peso cúbico ou peso bruto), para todas as transportadoras.
-            </p>
-          </div>
-          <div class="modal-mascot">
-            <img
-              src="./img/unnamed (2).png"
-              alt="Shopeto Feliz"
-              class="modal-shopeto"
-            />
-          </div>
-        </div>
-        <button class="btn btn-back" onclick="closeModal('modalSuccess')">
-          VOLTAR
-        </button>
+<!-- Modal de Sucesso -->
+<div id="modalSuccess" class="modal">
+  <div class="modal-content modal-success">
+    <h1>DEU CERTO! JÁ PODEMOS ENVIAR!</h1>
+    <div class="result-section">
+      <h2>
+        <span id="resultSuccess" class="result-value success-value"></span>
+      </h2>
+    </div>
+    <div class="modal-body">
+      <div class="modal-text">
+        <p>
+          O seu produto não ultrapassa o peso permitido para transporte em
+          nossa plataforma. O peso máximo permitido na Shopee é de 30 kg
+          (peso cúbico ou peso bruto), para todas as transportadoras.
+        </p>
+      </div>
+      <div class="modal-mascot">
+        <img
+          src="./img/unnamed (2).png"
+          alt="Shopeto Feliz"
+          class="modal-shopeto"
+        />
       </div>
     </div>
+    <button class="btn btn-back" id="closeModalSuccessBtn">
+      VOLTAR
+    </button>
+  </div>
+</div>
+
+<script type="module" src="./js/main.js"></script>
 
     <script type="module" src="./js/main.js"></script>
   </body>

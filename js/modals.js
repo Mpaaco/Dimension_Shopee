@@ -1,4 +1,3 @@
-
 export function showErrorModal(resultado, somaCm, pesoMaximo) {
     const modal = document.getElementById('modalError');
     const resultElement = document.getElementById('resultError');

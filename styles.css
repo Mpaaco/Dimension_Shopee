@@ -16,7 +16,7 @@ body {
     padding: 20px;
 }
 
-span{
+span {
     font-weight: 800;
     color: black;
 }
@@ -36,7 +36,7 @@ span{
 
 .title {
     text-align: center;
-    color:#FE6634;
+    color: #FE6634;
     font-weight: 1000;
     margin-bottom: 30px;
 }
@@ -256,26 +256,32 @@ span{
 }
 
 
-/* Remove setinhas do input tipo number */
+/* remoção de setas */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes slideIn {
-    from { 
+    from {
         opacity: 0;
         transform: translateY(-50px);
     }
-    to { 
+
+    to {
         opacity: 1;
         transform: translateY(0);
     }
@@ -286,34 +292,39 @@ input[type="number"]::-webkit-outer-spin-button {
     .calculator-card {
         padding: 20px;
     }
+
+    .mascot-section {
+        display: none;
+
+    }
     
+
     .content-wrapper {
         flex-direction: column;
         gap: 20px;
     }
-    
+
     .shopeto-image {
-        width: 150px;
-        margin: 0 auto;
+        display: none;
     }
-    
+
     .button-group {
         flex-direction: column;
     }
-    
+
     .modal-body {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .modal-text {
         text-align: center;
     }
-    
+
     .modal-shopeto {
         width: 120px;
     }
-    
+
     .title {
         font-size: 20px;
     }
@@ -323,16 +334,16 @@ input[type="number"]::-webkit-outer-spin-button {
     .calculator-card {
         padding: 15px;
     }
-    
+
     .title {
         font-size: 18px;
     }
-    
+
     .modal-content {
         margin: 10% auto;
         padding: 20px;
     }
-    
+
     .modal-content h1 {
         font-size: 20px;
     }
