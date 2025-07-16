@@ -7,12 +7,18 @@ export function validateNumberInput(event) {
 }
 
 export function formatNumberInput(input) {
-    input.addEventListener('input', function () {
-        let value = this.value.replace(/[^0-9.]/g, '');
-        const parts = value.split('.');
-        if (parts.length > 2) {
-            value = parts[0] + '.' + parts.slice(1).join('');
-        }
-        this.value = value;
-    });
+    input.addEventListener('input',function(){
+      let cursorPos = input.selectionStart;
+      let value = this.value;
+      
+      value = value.replace(/[^0-9.]/g, '');
+
+      const firstDotIndex = value.indexOf('.');
+      if (firstDotIndex !== -1){
+        value = valuew.slice(0, firstDotIndex + 1) + value.slice(firstDotIndex + 1).replace(/\./g,'');
+      }
+      this.value = value;
+
+      this.setSelectionRange(cursorPos, cursorPos);
+    })
 }
