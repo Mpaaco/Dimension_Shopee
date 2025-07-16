@@ -4,6 +4,7 @@ export function validateNumberInput(event) {
     if (/[0-9]/.test(char)) return;
     if (char === '.' && !event.target.value.includes('.')) return;
     event.preventDefault();
+
 }
 
 export function formatNumberInput(input) {
@@ -15,10 +16,10 @@ export function formatNumberInput(input) {
 
       const firstDotIndex = value.indexOf('.');
       if (firstDotIndex !== -1){
-        value = valuew.slice(0, firstDotIndex + 1) + value.slice(firstDotIndex + 1).replace(/\./g,'');
+        value = value.slice(0, firstDotIndex + 1) + value.slice(firstDotIndex + 1).replace(/\./g,'');
       }
       this.value = value;
 
       this.setSelectionRange(cursorPos, cursorPos);
-    })
+    });
 }

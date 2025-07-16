@@ -34,9 +34,11 @@ export function handleCalculate(event, inputs) {
     const resultadoFormatado = formatarResultado(pesoCubico);
     const somaCm = c + l + a;
 
-    pesoCubico > 30
-        ? showErrorModal(resultadoFormatado, somaCm, '30kg')
-        : showSuccessModal(resultadoFormatado, somaCm, '30kg');
+    if (pesoCubico > 30.1 || somaCm > 200.1){
+        showErrorModal(resultadoFormatado, somaCm);
+    } else {
+        showSuccessModal(resultadoFormatado,somaCm);
+    }
 }
 
 export function validateCampoComprimento(input){

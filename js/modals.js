@@ -1,11 +1,10 @@
-export function showErrorModal(resultado, somaCm, pesoMaximo) {
+export function showErrorModal(resultado, somaCm) {
     const modal = document.getElementById('modalError');
     const resultElement = document.getElementById('resultError');
 
     resultElement.innerHTML = `
         Peso cúbico: ${resultado} <br>
         Soma dos lados: ${somaCm} cm <br>
-        Peso máximo permitido: ${pesoMaximo}
     `;
     modal.style.display = 'block';
 
@@ -14,15 +13,14 @@ export function showErrorModal(resultado, somaCm, pesoMaximo) {
     });
 }
 
-export function showSuccessModal(resultado, somaCm, pesoMaximo) {
+export function showSuccessModal(resultado, somaCm) {
     const modal = document.getElementById('modalSuccess');
     const resultElement = document.getElementById('resultSuccess');
 
     resultElement.innerHTML = `
         Peso cúbico: ${resultado} <br>
         Soma dos lados: ${somaCm} cm <br>
-        Peso máximo permitido: ${pesoMaximo}
-    `;
+     `;
     modal.style.display = 'block';
 
     modal.addEventListener('click', (event) => {

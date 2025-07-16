@@ -15,13 +15,6 @@ const inputs = {
 form.addEventListener('submit', (e) => handleCalculate(e, inputs));
 clearBtn.addEventListener('click', () => clearForm(inputs));
 
-// Aplica validações de número e ponto
-Object.values(inputs).forEach(input => {
-  input.addEventListener('keypress', validateNumberInput);
-  input.addEventListener('keydown', validateNumberInput); 
-  formatNumberInput(input);
-});
-
 // Validações específicas
 inputs.comprimento.addEventListener('input', () => validateCampoComprimento(inputs.comprimento));
 inputs.largura.addEventListener('input', () => validateCampoLargura(inputs.largura));
