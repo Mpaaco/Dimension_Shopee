@@ -1,5 +1,4 @@
 import {handleCalculate, clearForm, validateCampoComprimento, validateCampoLargura, validateCampoAltura} from './formHandlers.js';
-import {validateNumberInput, formatNumberInput} from './validation.js';
 import {addInputEffects, addButtonHoverEffects} from './effects.js';
 import { closeModal } from './modals.js';
 

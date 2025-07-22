@@ -1,5 +1,4 @@
 import {handleCalculate, clearForm, validateCampoComprimento, validateCampoLargura, validateCampoAltura} from './formHandlers_moto.js';
-import {validateNumberInput, formatNumberInput} from './validation_moto.js';
 import {addInputEffects, addButtonHoverEffects} from './effects_moto.js';
 import { closeModal } from './modals_moto.js';
 
@@ -44,3 +43,4 @@ const closeModalErrorBtn = document.getElementById('closeModalErrorBtn');
 if (closeModalErrorBtn) {
   closeModalErrorBtn.addEventListener('click', () => closeModal('modalError'));
 }
+

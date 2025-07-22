@@ -1,6 +1,6 @@
 
 import { calcularPesoCubico, formatarResultado } from './calculate_moto.js';
-import { showErrorModal, showSuccessModal } from './modals.js';
+import { showErrorModal, showSuccessModal } from './modals_moto.js';
 
 export function handleCalculate(event, inputs) {
     event.preventDefault();

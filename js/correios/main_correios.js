@@ -1,6 +1,5 @@
-import {handleCalculate, clearForm, validateCampoComprimento, validateCampoLargura, validateCampoAltura} from './formHandlers.js';
-import {validateNumberInput, formatNumberInput} from './validation.js';
-import {addInputEffects, addButtonHoverEffects} from './effects.js';
+import {handleCalculate, clearForm, validateCampoComprimento, validateCampoLargura, validateCampoAltura} from './formHandlers_correios.js';
+import {addInputEffects, addButtonHoverEffects} from './effects_correios.js';
 import { closeModal } from './modals_correios.js';
 
 const form = document.getElementById('calculatorForm');
@@ -44,3 +43,4 @@ const closeModalErrorBtn = document.getElementById('closeModalErrorBtn');
 if (closeModalErrorBtn) {
   closeModalErrorBtn.addEventListener('click', () => closeModal('modalError'));
 }
+

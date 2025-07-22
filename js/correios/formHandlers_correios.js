@@ -1,5 +1,5 @@
 
-import { calcularPesoCubico, formatarResultado } from './calculate.js';
+import { calcularPesoCubico, formatarResultado } from './calculate_correios.js';
 import { showErrorModal, showSuccessModal } from './modals_correios.js';
 
 export function handleCalculate(event, inputs) {
@@ -19,14 +19,14 @@ export function handleCalculate(event, inputs) {
         alert('Comprimento não pode ser maior que 70 cm.');
         return;
     }
-    if ( a >= 8.1 )
+    if ( a >= 50.1 )
     {
-        alert(' não pode ser maior que 8 cm.');
+        alert(' não pode ser maior que 50 cm.');
         return;
     }
-    if ( l >= 8.1 )
+    if ( l >= 50.1 )
     {
-        alert('Largura não pode ser maior que 8 cm.');
+        alert('Largura não pode ser maior que 50 cm.');
         return;
     }
 
@@ -57,8 +57,8 @@ export function validateCampoLargura (input){
     const valor = parseFloat(input.value);
     if (!valor || valor <= 0){
         input.setCustomValidity("A largura deve ser um número maior que zero.")
-    } else if (valor >= 8.1 ){
-        input.setCustomValidity("A largura não pode ser maior que 8 cm.")
+    } else if (valor >= 50.1 ){
+        input.setCustomValidity("A largura não pode ser maior que 50 cm.")
     } else {
         input.setCustomValidity("");
     }
@@ -71,8 +71,8 @@ export function validateCampoAltura (input){
     const valor = parseFloat(input.value);
     if (!valor || valor <= 0){
         input.setCustomValidity("A altura deve ser um número maior que zero.")
-    } else if (valor >= 8.1 ){
-        input.setCustomValidity("A altura não pode ser maior que 8 cm.")
+    } else if (valor >= 50.1 ){
+        input.setCustomValidity("A altura não pode ser maior que 50 cm.")
     } else {
         input.setCustomValidity("")
     }
