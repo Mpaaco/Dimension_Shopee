@@ -1,6 +1,6 @@
-import {handleCalculate, clearForm, validateCampoComprimento, validateCampoLargura, validateCampoAltura} from './formHandlers_correios.js';
-import {addInputEffects, addButtonHoverEffects} from './effects_correios.js';
-import { closeModal } from './modals_correios.js';
+import {handleCalculate, clearForm, validateCampoComprimento, validateCampoLargura, validateCampoAltura} from './formHandlers.js';
+import {addInputEffects, addButtonHoverEffects} from '../../global/effects.js';
+import { closeModal } from '../../global/modals.js';
 
 const form = document.getElementById('calculatorForm');
 const clearBtn = document.getElementById('clearBtn');

@@ -1,6 +1,6 @@
 
-import { calcularPesoCubico, formatarResultado } from './calculate.js';
-import { showErrorModal, showSuccessModal } from './modals.js';
+import { calcularPesoCubico, formatarResultado } from '../../global/calculate.js';
+import { showErrorModal, showSuccessModal } from '../../global/modals.js';
 
 export function handleCalculate(event, inputs) {
     event.preventDefault();

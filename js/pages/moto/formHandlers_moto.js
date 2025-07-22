@@ -1,8 +1,8 @@
 
-import { calcularPesoCubico, formatarResultado } from './calculate_correios.js';
-import { showErrorModal, showSuccessModal } from './modals_correios.js';
+import { calcularPesoCubico, formatarResultado } from '../../global/calculate.js';
+import { showErrorModal, showSuccessModal } from '../../global/modals.js';
 
-export function handleCalculate(event, inputs) {
+export function handleCalculateMoto(event, inputs) {
     event.preventDefault();
 
     const { comprimento, largura, altura } = inputs;
@@ -14,19 +14,19 @@ export function handleCalculate(event, inputs) {
         alert('Preencha corretamente todos os campos com valores maiores que zero.');
         return;
     }
-    if ( c >= 70.1 )
+    if ( c >= 50.1 )
     {
-        alert('Comprimento não pode ser maior que 70 cm.');
+        alert('Comprimento não pode ser maior que 50 cm.');
         return;
     }
-    if ( a >= 50.1 )
+    if ( a >= 32.1 )
     {
-        alert(' não pode ser maior que 50 cm.');
+        alert(' não pode ser maior que 32 cm.');
         return;
     }
-    if ( l >= 50.1 )
+    if ( l >= 32.1 )
     {
-        alert('Largura não pode ser maior que 50 cm.');
+        alert('Largura não pode ser maior que 32 cm.');
         return;
     }
 
@@ -34,31 +34,31 @@ export function handleCalculate(event, inputs) {
     const resultadoFormatado = formatarResultado(pesoCubico);
     const somaCm = c + l + a;
 
-    if (pesoCubico > 30.1 || somaCm > 200.1){
+    if (pesoCubico > 10.1 || somaCm > 90.1){
         showErrorModal(resultadoFormatado, somaCm);
     } else {
         showSuccessModal(resultadoFormatado,somaCm);
     }
 }
 
-export function validateCampoComprimento(input){
+export function validateCampoComprimentoMoto(input){
     const valor = parseFloat(input.value);
     if (!valor || valor <= 0){
         input.setCustomValidity("O comprimento deve ser um número maior que zero.")
-    } else if ( valor >= 70.1 ){
-        input.setCustomValidity("O comprimento não pode ser maior que 70 cm.")
+    } else if ( valor >= 50.1 ){
+        input.setCustomValidity("O comprimento não pode ser maior que 50 cm.")
     }else {
         input.setCustomValidity("");}
 
         input.reportValidity();
 }
 
-export function validateCampoLargura (input){
+export function validateCampoLarguraMoto (input){
     const valor = parseFloat(input.value);
     if (!valor || valor <= 0){
         input.setCustomValidity("A largura deve ser um número maior que zero.")
-    } else if (valor >= 50.1 ){
-        input.setCustomValidity("A largura não pode ser maior que 50 cm.")
+    } else if (valor >= 32.1 ){
+        input.setCustomValidity("A largura não pode ser maior que 32 cm.")
     } else {
         input.setCustomValidity("");
     }
@@ -67,12 +67,12 @@ export function validateCampoLargura (input){
 
 }
 
-export function validateCampoAltura (input){
+export function validateCampoAlturaMoto (input){
     const valor = parseFloat(input.value);
     if (!valor || valor <= 0){
         input.setCustomValidity("A altura deve ser um número maior que zero.")
-    } else if (valor >= 50.1 ){
-        input.setCustomValidity("A altura não pode ser maior que 50 cm.")
+    } else if (valor >= 32.1 ){
+        input.setCustomValidity("A altura não pode ser maior que 32 cm.")
     } else {
         input.setCustomValidity("")
     }
@@ -80,7 +80,7 @@ export function validateCampoAltura (input){
     input.reportValidity();
 }
 
-export function clearForm(inputs) {
+export function clearFormMoto(inputs) {
     inputs.comprimento.value = '';
     inputs.largura.value = '';
     inputs.altura.value = '';

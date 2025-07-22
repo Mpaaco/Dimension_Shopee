@@ -1,6 +1,6 @@
-import {handleCalculate, clearForm, validateCampoComprimento, validateCampoLargura, validateCampoAltura} from './formHandlers.js';
-import {addInputEffects, addButtonHoverEffects} from './effects.js';
-import { closeModal } from './modals.js';
+import {handleCalculateMoto, clearFormMoto, validateCampoComprimentoMoto, validateCampoLarguraMoto, validateCampoAlturaMoto} from './formHandlers_moto.js';
+import {addInputEffects, addButtonHoverEffects} from '../../global/effects.js';
+import { closeModal } from '../../global/modals.js';
 
 const form = document.getElementById('calculatorForm');
 const clearBtn = document.getElementById('clearBtn');
@@ -11,19 +11,20 @@ const inputs = {
   altura: document.getElementById('altura'),
 };
 
-form.addEventListener('submit', (e) => handleCalculate(e, inputs));
-clearBtn.addEventListener('click', () => clearForm(inputs));
+form.addEventListener('submit', (e) => handleCalculateMoto(e, inputs));
+clearBtn.addEventListener('click', () => clearFormMoto(inputs));
 
 // Validações específicas
-inputs.comprimento.addEventListener('input', () => validateCampoComprimento(inputs.comprimento));
-inputs.largura.addEventListener('input', () => validateCampoLargura(inputs.largura));
-inputs.altura.addEventListener('input', () => validateCampoAltura(inputs.altura));
+inputs.comprimento.addEventListener('input', () => validateCampoComprimentoMoto(inputs.comprimento));
+inputs.largura.addEventListener('input', () => validateCampoLarguraMoto(inputs.largura));
+inputs.altura.addEventListener('input', () => validateCampoAlturaMoto(inputs.altura));
 
 // Estilos e interações
 addInputEffects(Object.values(inputs));
 addButtonHoverEffects(document.querySelectorAll('.btn'));
 
 window.addEventListener('load', () => inputs.comprimento.focus());
+
 
 function closeAndReload(id) {
   closeModal(id);
