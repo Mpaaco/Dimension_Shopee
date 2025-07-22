@@ -18,7 +18,7 @@ body {
 
 span {
     font-weight: 800;
-    color: black;
+    color: #FE6634;
 }
 
 .container {
@@ -63,10 +63,19 @@ span {
     margin-bottom: 10px;
 }
 
-.instructions p {
+.li li{
     color: #252525;
     font-size: 18px;
-    line-height: 1.5;
+    margin: 10px;
+    
+}
+
+.checkbox-grup{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 25px;
+
 }
 
 .calculator-form {

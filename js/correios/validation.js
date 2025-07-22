@@ -4,7 +4,6 @@ export function validateNumberInput(event) {
     if (/[0-9]/.test(char)) return;
     if (char === '.' && !event.target.value.includes('.')) return;
     event.preventDefault();
-
 }
 
 export function formatNumberInput(input) {

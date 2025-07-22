@@ -21,15 +21,28 @@
           <div class="form-section">
             <div class="instructions">
               <h3>COMO UTILIZAR</h3>
-              <p>
-                <span>
-                  Utilizar é bem simples: Basta colocar o comprimento, a largura
-                  e a altura nos campos a seguir.</span
-                >
-                Depois de preencher, <span>aperte o botão "calcular"</span>.
-              </p>
+              <div class="li">
+              <li><span>Utilizar é bem simples:</span> Basta colocar o<span>
+                comprimento, a largura e a altura nos campos a seguir.</span></li>
+              <li>Inserir as dimensões do produto <span>EMBALADO</span>.</li>
+              <li><span>O lado maior da embalagem deve ser informado no campo "Comprimento"</span>. </li>
+              <li>Depois de preencher, <span>aperte o botão "calcular"</span>.</li>
+              </div>
             </div>
-
+            <div class="checkbox-grup">
+              <label>
+                <input type="checkbox" id="checkboxSPX" />
+                SPX
+              </label>
+              <label>
+                <input type="checkbox" id="checkboxOwnFlex" />
+                Entrega por Moto
+              </label>
+              <label>
+                <input type="checkbox" id="checkboxCorreios" />
+                Correios
+              </label>
+            </div>
             <form id="calculatorForm" class="calculator-form">
               <div class="input-group">
                 <label for="comprimento">COMPRIMENTO</label>
@@ -92,69 +105,65 @@
       </div>
     </div>
 
-   <!-- Modal de Erro -->
-<div id="modalError" class="modal">
-  <div class="modal-content modal-error">
-    <h1>NÃO PODEMOS ENVIAR ESSE PRODUTO!</h1>
-    <div class="result-section">
-      <h2>
-        <span id="resultError" class="result-value error-value"></span>
-      </h2>
-    </div>
-    <div class="modal-body">
-      <div class="modal-text">
-        <p>
-          <span>O seu produto ultrapassa o peso permitido</span> para
-          transporte em nossa plataforma. <br />
-          O <span>peso máximo permitido</span> para envio é de
-          <span>30 kg (peso cúbico ou peso bruto)</span>, para todas as
-          transportadoras.
-        </p>
+    <!-- Modal de Erro -->
+    <div id="modalError" class="modal">
+      <div class="modal-content modal-error">
+        <h1>NÃO PODEMOS ENVIAR ESSE PRODUTO!</h1>
+        <div class="result-section">
+          <h2>
+            <span id="resultError" class="result-value error-value"></span>
+          </h2>
+        </div>
+        <div class="modal-body">
+          <div class="modal-text">
+            <p>
+              <span>O seu produto ultrapassa o peso permitido</span> para
+              transporte em nossa plataforma. <br />
+              O <span>peso máximo permitido</span> para envio é de
+              <span>30 kg (peso cúbico ou peso bruto)</span>, para todas as
+              transportadoras.
+            </p>
+          </div>
+          <div class="modal-mascot">
+            <img
+              src="./img/unnamed (1).png"
+              alt="Shopeto Triste"
+              class="modal-shopeto"
+            />
+          </div>
+        </div>
+        <button class="btn btn-back" id="closeModalErrorBtn">VOLTAR</button>
       </div>
-      <div class="modal-mascot">
-        <img
-          src="./img/unnamed (1).png"
-          alt="Shopeto Triste"
-          class="modal-shopeto"
-        />
-      </div>
     </div>
-    <button class="btn btn-back" id="closeModalErrorBtn">
-      VOLTAR
-    </button>
-  </div>
-</div>
 
-<!-- Modal de Sucesso -->
-<div id="modalSuccess" class="modal">
-  <div class="modal-content modal-success">
-    <h1>DEU CERTO! JÁ PODEMOS ENVIAR!</h1>
-    <div class="result-section">
-      <h2>
-        <span id="resultSuccess" class="result-value success-value"></span>
-      </h2>
-    </div>
-    <div class="modal-body">
-      <div class="modal-text">
-        <p>
-          O seu produto não ultrapassa o peso permitido para transporte em
-          nossa plataforma. O peso máximo permitido na Shopee é de 30 kg
-          (peso cúbico ou peso bruto), para todas as transportadoras.
-        </p>
+    <!-- Modal de Sucesso -->
+    <div id="modalSuccess" class="modal">
+      <div class="modal-content modal-success">
+        <h1>DEU CERTO! JÁ PODEMOS ENVIAR!</h1>
+        <div class="result-section">
+          <h2>
+            <span id="resultSuccess" class="result-value success-value"></span>
+          </h2>
+        </div>
+        <div class="modal-body">
+          <div class="modal-text">
+            <p>
+              O seu produto não ultrapassa o peso permitido para transporte em
+              nossa plataforma. O peso máximo permitido na Shopee é de 30 kg
+              (peso cúbico ou peso bruto), para todas as transportadoras.
+            </p>
+          </div>
+          <div class="modal-mascot">
+            <img
+              src="./img/unnamed (2).png"
+              alt="Shopeto Feliz"
+              class="modal-shopeto"
+            />
+          </div>
+        </div>
+        <button class="btn btn-back" id="closeModalSuccessBtn">VOLTAR</button>
       </div>
-      <div class="modal-mascot">
-        <img
-          src="./img/unnamed (2).png"
-          alt="Shopeto Feliz"
-          class="modal-shopeto"
-        />
-      </div>
     </div>
-    <button class="btn btn-back" id="closeModalSuccessBtn">
-      VOLTAR
-    </button>
-  </div>
-</div>
-    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/spx/main.js"></script>
   </body>
 </html>
