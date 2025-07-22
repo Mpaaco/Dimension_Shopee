@@ -1,4 +1,4 @@
-import {handleCalculate, clearForm, validateCampoComprimento, validateCampoLargura, validateCampoAltura} from './formHandlers_moto.js';
+import {handleCalculateMoto, clearFormMoto, validateCampoComprimentoMoto, validateCampoLarguraMoto, validateCampoAlturaMoto} from './formHandlers_moto.js';
 import {addInputEffects, addButtonHoverEffects} from './effects_moto.js';
 import { closeModal } from './modals_moto.js';
 
@@ -11,13 +11,13 @@ const inputs = {
   altura: document.getElementById('altura'),
 };
 
-form.addEventListener('submit', (e) => handleCalculate(e, inputs));
-clearBtn.addEventListener('click', () => clearForm(inputs));
+form.addEventListener('submit', (e) => handleCalculateMoto(e, inputs));
+clearBtn.addEventListener('click', () => clearFormMoto(inputs));
 
 // Validações específicas
-inputs.comprimento.addEventListener('input', () => validateCampoComprimento(inputs.comprimento));
-inputs.largura.addEventListener('input', () => validateCampoLargura(inputs.largura));
-inputs.altura.addEventListener('input', () => validateCampoAltura(inputs.altura));
+inputs.comprimento.addEventListener('input', () => validateCampoComprimentoMoto(inputs.comprimento));
+inputs.largura.addEventListener('input', () => validateCampoLarguraMoto(inputs.largura));
+inputs.altura.addEventListener('input', () => validateCampoAlturaMoto(inputs.altura));
 
 // Estilos e interações
 addInputEffects(Object.values(inputs));
@@ -25,22 +25,26 @@ addButtonHoverEffects(document.querySelectorAll('.btn'));
 
 window.addEventListener('load', () => inputs.comprimento.focus());
 
-// Fecha modais com ESC
+
+function closeAndReload(id) {
+  closeModal(id);
+  location.reload();
+}
+
+// ESC
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
-    closeModal('modalError');
-    closeModal('modalSuccess');
+    closeAndReload('modalError');
   }
 });
 
 // Botões dos modais
-const closeModalSuccessBtn = document.getElementById('closeModalSuccessBtn');
-if (closeModalSuccessBtn) {
-  closeModalSuccessBtn.addEventListener('click', () => closeModal('modalSuccess'));
+const btnSuccess = document.getElementById('closeModalSuccessBtn');
+if (btnSuccess) {
+  btnSuccess.addEventListener('click', () => closeAndReload('modalSuccess'));
 }
 
-const closeModalErrorBtn = document.getElementById('closeModalErrorBtn');
-if (closeModalErrorBtn) {
-  closeModalErrorBtn.addEventListener('click', () => closeModal('modalError'));
+const btnError = document.getElementById('closeModalErrorBtn');
+if (btnError) {
+  btnError.addEventListener('click', () => closeAndReload('modalError'));
 }
-

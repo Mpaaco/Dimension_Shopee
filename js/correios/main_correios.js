@@ -25,22 +25,25 @@ addButtonHoverEffects(document.querySelectorAll('.btn'));
 
 window.addEventListener('load', () => inputs.comprimento.focus());
 
-// Fecha modais com ESC
+function closeAndReload(id) {
+  closeModal(id);
+  location.reload();
+}
+
+// ESC
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
-    closeModal('modalError');
-    closeModal('modalSuccess');
+    closeAndReload('modalError');
   }
 });
 
 // Botões dos modais
-const closeModalSuccessBtn = document.getElementById('closeModalSuccessBtn');
-if (closeModalSuccessBtn) {
-  closeModalSuccessBtn.addEventListener('click', () => closeModal('modalSuccess'));
+const btnSuccess = document.getElementById('closeModalSuccessBtn');
+if (btnSuccess) {
+  btnSuccess.addEventListener('click', () => closeAndReload('modalSuccess'));
 }
 
-const closeModalErrorBtn = document.getElementById('closeModalErrorBtn');
-if (closeModalErrorBtn) {
-  closeModalErrorBtn.addEventListener('click', () => closeModal('modalError'));
+const btnError = document.getElementById('closeModalErrorBtn');
+if (btnError) {
+  btnError.addEventListener('click', () => closeAndReload('modalError'));
 }
-

@@ -2,7 +2,7 @@
 import { calcularPesoCubico, formatarResultado } from './calculate_moto.js';
 import { showErrorModal, showSuccessModal } from './modals_moto.js';
 
-export function handleCalculate(event, inputs) {
+export function handleCalculateMoto(event, inputs) {
     event.preventDefault();
 
     const { comprimento, largura, altura } = inputs;
@@ -41,7 +41,7 @@ export function handleCalculate(event, inputs) {
     }
 }
 
-export function validateCampoComprimento(input){
+export function validateCampoComprimentoMoto(input){
     const valor = parseFloat(input.value);
     if (!valor || valor <= 0){
         input.setCustomValidity("O comprimento deve ser um número maior que zero.")
@@ -53,7 +53,7 @@ export function validateCampoComprimento(input){
         input.reportValidity();
 }
 
-export function validateCampoLargura (input){
+export function validateCampoLarguraMoto (input){
     const valor = parseFloat(input.value);
     if (!valor || valor <= 0){
         input.setCustomValidity("A largura deve ser um número maior que zero.")
@@ -67,7 +67,7 @@ export function validateCampoLargura (input){
 
 }
 
-export function validateCampoAltura (input){
+export function validateCampoAlturaMoto (input){
     const valor = parseFloat(input.value);
     if (!valor || valor <= 0){
         input.setCustomValidity("A altura deve ser um número maior que zero.")
@@ -80,7 +80,7 @@ export function validateCampoAltura (input){
     input.reportValidity();
 }
 
-export function clearForm(inputs) {
+export function clearFormMoto(inputs) {
     inputs.comprimento.value = '';
     inputs.largura.value = '';
     inputs.altura.value = '';

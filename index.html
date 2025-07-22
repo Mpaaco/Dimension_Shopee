@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico" type="image/x-icon">
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
     </style>
@@ -22,24 +23,23 @@
             <div class="instructions">
               <h3>COMO UTILIZAR</h3>
               <div class="li">
-              <li><span>Utilizar é bem simples:</span> Basta colocar o<span>
-                comprimento, a largura e a altura nos campos a seguir.</span></li>
-              <li>Inserir as dimensões do produto <span>EMBALADO</span>.</li>
-              <li><span>O lado maior da embalagem deve ser informado no campo "Comprimento"</span>. </li>
-              <li>Depois de preencher, <span>aperte o botão "calcular"</span>.</li>
+              <li>Coloque o<span>
+                comprimento</span>, a <span>largura</span> e a <span>altura</span> nos campos a seguir.</li>
+              <li>O <span>lado maior da embalagem</span> deve ser informado no <span>campo "Comprimento"</span>. </li>
+              <li><span>Selecione o tipo de envio</span> e preencha os campos.</li>
               </div>
             </div>
             <div class="checkbox-grup">
               <label>
-                <input type="checkbox" id="checkboxSPX" />
+                <input type="checkbox" id="chk-SPX" />
                 SPX
               </label>
               <label>
-                <input type="checkbox" id="checkboxOwnFlex" />
+                <input type="checkbox" id="chk-moto" />
                 Entrega por Moto
               </label>
               <label>
-                <input type="checkbox" id="checkboxCorreios" />
+                <input type="checkbox" id="chk-correios" />
                 Correios
               </label>
             </div>
@@ -164,6 +164,6 @@
         <button class="btn btn-back" id="closeModalSuccessBtn">VOLTAR</button>
       </div>
     </div>
-    <script type="module" src="./js/correios/main_correios.js"></script>
+    <script type="module" src="./js/launcher.js"></script>
   </body>
 </html>

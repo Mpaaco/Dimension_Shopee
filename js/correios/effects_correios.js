@@ -1,7 +1,7 @@
 export function addInputEffects(inputs) {
     inputs.forEach(input => {
         input.addEventListener('focus', () => {
-            input.style.borderColor = '#FF6B35';
+            input.style.borderColor = '#ffe135ff';
             input.style.boxShadow = '0 0 0 3px rgba(255, 107, 53, 0.1)';
         });
         input.addEventListener('blur', () => {
