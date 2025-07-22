@@ -1,4 +1,4 @@
-// launcher.js
+//localização
 const chkCorreios = document.getElementById('chk-correios');
 const chkMoto     = document.getElementById('chk-moto');
 const chkSpx      = document.getElementById('chk-SPX');
