@@ -6,10 +6,10 @@ const chkSpx      = document.getElementById('chk-SPX');
 async function handleCheck(box, modulePath, fnName) {
   if (!box.checked) return;
 
-  // Salva no localStorage qual checkbox foi selecionado
+  // Salva o checkbox que foi selecionado localmente
   localStorage.setItem('selectedCheckbox', box.id);
 
-  // Atualiza a página (a função será executada novamente no carregamento)
+  // Atualiza a página
   location.reload();
 }
 
@@ -21,7 +21,6 @@ window.addEventListener('DOMContentLoaded', async () => {
     const checkbox = document.getElementById(savedCheckbox);
     checkbox.checked = true;
 
-    // Define qual módulo e função devem ser carregados
     let modulePath, fnName;
 
     switch (savedCheckbox) {
