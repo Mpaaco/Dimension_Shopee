@@ -7,163 +7,183 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="shortcut icon" href="/img/favicon/favicon.ico" type="image/x-icon">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="shortcut icon"
+      href="/img/favicon/favicon.ico"
+      type="image/x-icon"
+    />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
     </style>
   </head>
   <body>
-    <header></header>
-    <div class="container">
-      <div class="calculator-card">
-        <h1 class="title">Veja se o seu produto pode ser enviado:</h1>
-
-        <div class="content-wrapper">
+    
+    <section>
+      <div class="container">
+        <div class="context">
+          <div class="img_context">
+            <img src="./img/Caixa 3D.png" alt="" />
+          </div>
+          <div class="context_text">
+            <h1>Calculadora de Peso Cúbico</h1>
+            <p>
+              Além do peso real, as transportadoras também consideram o
+              <span>peso cúbico</span>, que representa o espaço que o item ocupa
+              durante o transporte. Veja se o seu produto pode ser enviado:
+            </p>
+          </div>
+        </div>
+        <div class="home">
+          <div class="utilit">
+            <h1>Como Utilizar</h1>
+            <ol>
+              <li>Selecione o <span>tipo de envio</span>.</li>
+              <li>
+                Preencha os campos com as medidas de altura, largura e comprimento
+                e clique em <span>"calcular"</span>.
+              </li>
+            </ol>
+            <p>
+              <span>Lembre-se:</span> Considere o maior lado como o comprimento.
+            </p>
+          </div>
           <div class="form-section">
-            <div class="instructions">
-              <h3>COMO UTILIZAR</h3>
-              <div class="li">
-              <li>Coloque o<span>
-                comprimento</span>, a <span>largura</span> e a <span>altura</span> nos campos a seguir.</li>
-              <li>O <span>lado maior da embalagem</span> deve ser informado no <span>campo "Comprimento"</span>. </li>
-              <li><span>Selecione o tipo de envio</span> e preencha os campos.</li>
-              </div>
-            </div>
+            <h2>Tipo de Envio:</h2>
             <div class="checkbox-grup">
-              <label>
+              <label class="flex-container">
                 <input type="checkbox" id="chk-SPX" />
-                SPX
+                <p>
+                  Shopee <br />
+                  Express (SPX)
+                </p>
               </label>
-              <label>
+              <label class="flex-container">
                 <input type="checkbox" id="chk-moto" />
-                Entrega por Moto
+                <p>
+                  Entrega <br />
+                  por Moto
+                </p>
               </label>
-              <label>
+              <label class="flex-container">
                 <input type="checkbox" id="chk-correios" />
-                Correios
+                <p>Correios</p>
               </label>
             </div>
             <form id="calculatorForm" class="calculator-form">
-              <div class="input-group">
-                <label for="comprimento">COMPRIMENTO</label>
-                <input
-                  type="number"
-                  id="comprimento"
-                  name="comprimento"
-                  placeholder="coloque o valor em centímetros"
-                  required
-                  min="0"
-                  step="0.1"
-                />
+              <h2>Dimensões do Item Embalado:</h2>
+              <div class="inputs">
+                <div class="input-group">
+                  <label for="comprimento"></label>
+                  <input
+                    type="number"
+                    id="comprimento"
+                    name="comprimento"
+                    placeholder="Comprimeto"
+                    required
+                    min="0"
+                    step="0.1"
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="largura"></label>
+                  <input
+                    type="number"
+                    id="largura"
+                    name="largura"
+                    placeholder="Largura"
+                    required
+                    min="0"
+                    step="0.1"
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="altura"></label>
+                  <input
+                    type="number"
+                    id="altura"
+                    name="altura"
+                    placeholder="Altura"
+                    required
+                    min="0"
+                    step="0.1"
+                  />
+                </div>
               </div>
-
-              <div class="input-group">
-                <label for="largura">LARGURA</label>
-                <input
-                  type="number"
-                  id="largura"
-                  name="largura"
-                  placeholder="coloque o valor em centímetros"
-                  required
-                  min="0"
-                  step="0.1"
-                />
-              </div>
-
-              <div class="input-group">
-                <label for="altura">ALTURA</label>
-                <input
-                  type="number"
-                  id="altura"
-                  name="altura"
-                  placeholder="coloque o valor em centímetros"
-                  required
-                  min="0"
-                  step="0.1"
-                />
-              </div>
-
               <div class="button-group">
-                <button type="submit" class="btn btn-calculate">
-                  CALCULAR
-                </button>
+                <button type="submit" class="btn btn-calculate">CALCULAR</button>
                 <button type="button" class="btn btn-clear" id="clearBtn">
                   LIMPAR
                 </button>
               </div>
             </form>
           </div>
-
-          <div class="mascot-section">
-            <img
-              src="./img/unnamed.png"
-              alt="Shopeto Mascot"
-              class="shopeto-image"
-            />
-          </div>
         </div>
       </div>
-    </div>
-
-    <!-- Modal de Erro -->
-    <div id="modalError" class="modal">
-      <div class="modal-content modal-error">
-        <h1>NÃO PODEMOS ENVIAR ESSE PRODUTO!</h1>
-        <div class="result-section">
-          <h2>
-            <span id="resultError" class="result-value error-value"></span>
-          </h2>
-        </div>
-        <div class="modal-body">
-          <div class="modal-text">
-            <p>
-              <span>O seu produto ultrapassa o peso permitido</span> para
-              transporte em nossa plataforma. <br />
-              O <span>peso máximo permitido</span> para envio é de
-              <span>30 kg (peso cúbico ou peso bruto)</span>, para todas as
-              transportadoras.
-            </p>
+      <!-- Modal de Erro -->
+      <div id="modalError" class="modal">
+        <div class="modal-content modal-error">
+          <h1>NÃO PODEMOS ENVIAR ESSE PRODUTO!</h1>
+          <div class="result-section">
+            <h2>
+              <span id="resultError" class="result-value error-value"></span>
+            </h2>
           </div>
-          <div class="modal-mascot">
-            <img
-              src="./img/unnamed (1).png"
-              alt="Shopeto Triste"
-              class="modal-shopeto"
-            />
+          <div class="modal-body">
+            <div class="modal-text">
+              <p>
+                <span>O seu produto ultrapassa o peso permitido</span> para
+                transporte em nossa plataforma. <br />
+                O <span>peso máximo permitido</span> para envio é de
+                <span>30 kg (peso cúbico ou peso bruto)</span>, para todas as
+                transportadoras.
+              </p>
+            </div>
+            <div class="modal-mascot">
+              <img
+                src="./img/unnamed (1).png"
+                alt="Shopeto Triste"
+                class="modal-shopeto"
+              />
+            </div>
           </div>
+          <button class="btn btn-back" id="closeModalErrorBtn">VOLTAR</button>
         </div>
-        <button class="btn btn-back" id="closeModalErrorBtn">VOLTAR</button>
       </div>
-    </div>
-
-    <!-- Modal de Sucesso -->
-    <div id="modalSuccess" class="modal">
-      <div class="modal-content modal-success">
-        <h1>DEU CERTO! JÁ PODEMOS ENVIAR!</h1>
-        <div class="result-section">
-          <h2>
-            <span id="resultSuccess" class="result-value success-value"></span>
-          </h2>
-        </div>
-        <div class="modal-body">
-          <div class="modal-text">
-            <p>
-              O seu produto não ultrapassa o peso permitido para transporte em
-              nossa plataforma. O peso máximo permitido na Shopee é de 30 kg
-              (peso cúbico ou peso bruto), para todas as transportadoras.
-            </p>
+      <!-- Modal de Sucesso -->
+      <div id="modalSuccess" class="modal">
+        <div class="modal-content modal-success">
+          <h1>DEU CERTO! JÁ PODEMOS ENVIAR!</h1>
+          <div class="result-section">
+            <h2>
+              <span id="resultSuccess" class="result-value success-value"></span>
+            </h2>
           </div>
-          <div class="modal-mascot">
-            <img
-              src="./img/unnamed (2).png"
-              alt="Shopeto Feliz"
-              class="modal-shopeto"
-            />
+          <div class="modal-body">
+            <div class="modal-text">
+              <p>
+                O seu produto não ultrapassa o peso permitido para transporte em
+                nossa plataforma. O peso máximo permitido na Shopee é de 30 kg
+                (peso cúbico ou peso bruto), para todas as transportadoras.
+              </p>
+            </div>
+            <div class="modal-mascot">
+              <img
+                src="./img/unnamed (2).png"
+                alt="Shopeto Feliz"
+                class="modal-shopeto"
+              />
+            </div>
           </div>
+          <button class="btn btn-back" id="closeModalSuccessBtn">VOLTAR</button>
         </div>
-        <button class="btn btn-back" id="closeModalSuccessBtn">VOLTAR</button>
       </div>
-    </div>
-    <script type="module" src="./js/launcher.js"></script>
+      <script type="module" src="./js/launcher.js"></script>
+    </section>
   </body>
 </html>
