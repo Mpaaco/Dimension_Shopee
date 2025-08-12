@@ -23,7 +23,6 @@
     </style>
   </head>
   <body>
-    
     <section>
       <div class="container">
         <div class="context">
@@ -45,8 +44,8 @@
             <ol>
               <li>Selecione o <span>tipo de envio</span>.</li>
               <li>
-                Preencha os campos com as medidas de altura, largura e comprimento
-                e clique em <span>"calcular"</span>.
+                Preencha os campos com as medidas de altura, largura e
+                comprimento e clique em <span>"calcular"</span>.
               </li>
             </ol>
             <p>
@@ -116,7 +115,9 @@
                 </div>
               </div>
               <div class="button-group">
-                <button type="submit" class="btn btn-calculate">CALCULAR</button>
+                <button type="submit" class="btn btn-calculate">
+                  CALCULAR
+                </button>
                 <button type="button" class="btn btn-clear" id="clearBtn">
                   LIMPAR
                 </button>
@@ -128,59 +129,55 @@
       <!-- Modal de Erro -->
       <div id="modalError" class="modal">
         <div class="modal-content modal-error">
-          <h1>NÃO PODEMOS ENVIAR ESSE PRODUTO!</h1>
-          <div class="result-section">
-            <h2>
-              <span id="resultError" class="result-value error-value"></span>
-            </h2>
+          <div class="text_header_erro">
+            <img src="./img/warning 1.png" alt="warning" />
+            <h1>Não podemos enviar o item.</h1>
           </div>
-          <div class="modal-body">
-            <div class="modal-text">
-              <p>
-                <span>O seu produto ultrapassa o peso permitido</span> para
-                transporte em nossa plataforma. <br />
-                O <span>peso máximo permitido</span> para envio é de
-                <span>30 kg (peso cúbico ou peso bruto)</span>, para todas as
-                transportadoras.
-              </p>
+          <div class="results_error">
+            <div class="result-section">
+              <h2>
+                <span id="resultError" class="result-value error-value"></span>
+              </h2>
             </div>
-            <div class="modal-mascot">
-              <img
-                src="./img/unnamed (1).png"
-                alt="Shopeto Triste"
-                class="modal-shopeto"
-              />
+            <div class="modal-body">
+              <div class="modal-text">
+                <p>O produto <span>ultrapassa o peso permitido</span> para transporte</p>
+                <p>O peso máximo para envio é de <span>30kg</span> (peso cúbico e peso bruto), para todas as transportadoras.</p>
+              </div>
             </div>
+            <button class="btn btn-back" id="closeModalErrorBtn">VOLTAR</button>
           </div>
-          <button class="btn btn-back" id="closeModalErrorBtn">VOLTAR</button>
         </div>
       </div>
       <!-- Modal de Sucesso -->
       <div id="modalSuccess" class="modal">
         <div class="modal-content modal-success">
-          <h1>DEU CERTO! JÁ PODEMOS ENVIAR!</h1>
-          <div class="result-section">
-            <h2>
-              <span id="resultSuccess" class="result-value success-value"></span>
-            </h2>
+          <div class="text_header">
+            <img src="./img/tick 1.png" alt="tick" />
+            <h1>Item permitido para envio!</h1>
           </div>
-          <div class="modal-body">
-            <div class="modal-text">
-              <p>
-                O seu produto não ultrapassa o peso permitido para transporte em
-                nossa plataforma. O peso máximo permitido na Shopee é de 30 kg
-                (peso cúbico ou peso bruto), para todas as transportadoras.
-              </p>
+          <div class="results">
+            <div class="result-section">
+              <h2>
+                <span
+                  id="resultSuccess"
+                  class="result-value success-value"
+                ></span>
+              </h2>
             </div>
-            <div class="modal-mascot">
-              <img
-                src="./img/unnamed (2).png"
-                alt="Shopeto Feliz"
-                class="modal-shopeto"
-              />
+            <div class="modal-body">
+              <div class="modal-text">
+                <p>O produto <span>não ultrapassa o peso permitido</span> para transporte.</p>
+                <p>Garanta que os itens cheguem intactos usando <span>
+                  embalagens apropriadas
+                  e com proteção.
+                </span></p>
+              </div>
             </div>
+            <button class="btn btn-back" id="closeModalSuccessBtn">
+              VOLTAR
+            </button>
           </div>
-          <button class="btn btn-back" id="closeModalSuccessBtn">VOLTAR</button>
         </div>
       </div>
       <script type="module" src="./js/launcher.js"></script>
