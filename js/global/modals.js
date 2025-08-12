@@ -19,7 +19,7 @@ export function showSuccessModal(resultado, somaCm) {
 
     resultElement.innerHTML = `
         Peso Cúbico: ${resultado} <br>
-        Soma dos L'ados: ${somaCm} cm <br>
+        Soma dos Lados: ${somaCm} cm <br>
      `;
     modal.style.display = 'block';
 
