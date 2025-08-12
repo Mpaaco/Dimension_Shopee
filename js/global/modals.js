@@ -3,8 +3,8 @@ export function showErrorModal(resultado, somaCm) {
     const resultElement = document.getElementById('resultError');
 
     resultElement.innerHTML = `
-        Peso cúbico: ${resultado} <br>
-        Soma dos lados: ${somaCm} cm <br>
+        Peso Cúbico: ${resultado} <br>
+        Soma dos Lados: ${somaCm} cm <br>
     `;
     modal.style.display = 'block';
 
