@@ -1,4 +1,4 @@
-
+/* Calcular Pesso Cúbico */
 export function calcularPesoCubico(comprimento, largura, altura) {
     return (comprimento * largura * altura) / 6000;
 }
