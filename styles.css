@@ -4,15 +4,8 @@
     box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'ShopeeFont';
-  src: url('../fonts/shopeefont-regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 body{
-    font-family: "ShopeeFont";
+    font-family: 'roboto', sans-serif;
     background: #EEEEEE;
 }
 section {
